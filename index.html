@@ -17,19 +17,29 @@
     }
     #wrapper{
         width: 100%;
-        position: absolute;
+        position: fixed;
         text-align: center;
+        top: 41%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    canvas{
+        transform: scale(1.6);
     }
    
     #words{
         pointer-events:none;
         font-family: 'Calligraffitti', cursive;
-        position: absolute;
         width: 100%;
-        padding: 200px 0 0 0;
+        /* padding: 200px 0 0 0; */
         font-size: 2.8em;
         color: white;
         text-align: center;
+        position: fixed;
+        text-align: center;
+        top: 41%;
+        left:50%;
+        transform: translate(-50%,-50%);
     }
     #words p{
         display: none;
@@ -106,7 +116,7 @@
     <script>
     var RUN_AS_ANIMATION=true,
     
-    wrapper, canvas, context, width=600, height=600, Tau=Math.PI*2,
+    wrapper, canvas, context, width=1000, height=1000, Tau=Math.PI*1,
     systems=[],
     mouseX=0, mouseY=0, repelMouse = true,
     copyCount=1, sequenceCount=0, maxSequenceCount=22, sequenceDelay=2000,
